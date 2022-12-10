@@ -35,9 +35,9 @@ export async function searchEpisode(query){
         return [];
     }
 }
-export async function getAnimeInfo(id, dub = false){
+export async function getAnimeInfo(id, sub = false){
     try {
-        const data = await axios.get(`${apiUrl}meta/anilist/info/${id}?provider=gogoanime&dub=${dub}`);
+        const data = await axios.get(`${apiUrl}meta/anilist/info/${id}?provider=gogoanime&sub=${sub}`);
         return data.data;
     } catch (error) {
         return [];
